@@ -38,7 +38,7 @@ export const Valid = {
  * 存储localStorage
  */
 export const setStore = (name, content) => {
-  if (!name) return;
+  if (!name) return false;
   if (typeof content !== 'string') {
     content = JSON.stringify(content);
   }
