@@ -4,36 +4,36 @@
     <div class="header"></div>
     <div class="container" style="padding-bottom: 50px;">
 
-        <template v-if="user_id != ''">
+        <template v-if="userinfo !== undefined">
         <div class="account-header">
-            <a class="account-header-sign" :class="{'signed':is_signed}">
-                {{ is_signed ? '挖矿中' : '挖矿' }}
+            <a class="account-header-sign" :class="{'signed':userinfo.is_signed}">
+                {{ userinfo.is_signed ? '挖矿中' : '挖矿' }}
             </a>
             <div class="account-header-info">
                 <a class="account-header-figure">
-                    <template v-if="user_figure == ''">
+                    <template v-if="userinfo.user_figure == ''">
                     <img src="../assets/images/user-figure.png" />
                     </template>
                     <template v-else>
-                    <img :src="'https://m.waitui.com/' + user_figure" />
+                    <img :src="'https://m.waitui.com/' + userinfo.user_figure" />
                     </template>
                 </a>
                 <div class="account-header-name">
-                    <h4><a>{{ user_name }}</a></h4>
+                    <h4><a>{{ userinfo.user_name }}</a></h4>
                     <p><a>点击查看或编辑个人信息</a></p>
                 </div>
             </div>
             <div class="account-header-tab">
                 <a>
-                    <h4>{{ user_balance }}</h4>
+                    <h4>{{ user_balance ? user_balance : '--' }}</h4>
                     <p>钱包</p>
                 </a>
                 <a>
-                    <h4>{{ user_score }}</h4>
+                    <h4>{{ user_score ? user_score : '--' }}</h4>
                     <p>W币</p>
                 </a>
                 <a>
-                    <h4>{{ unreadCount }}</h4>
+                    <h4>{{ unreadCount ? unreadCount : '--' }}</h4>
                     <p>未读</p>
                 </a>
             </div>
@@ -107,11 +107,11 @@
         </div>
 
         <van-cell-group class="mt15">
-            <van-cell title="我的订单" :value="orderCount" is-link
+            <van-cell title="我的订单" is-link
               @click="changePopupLogin(true)" />
-            <van-cell title="我的域名" :value="domainCount" is-link
+            <van-cell title="我的域名" is-link
               @click="changePopupLogin(true)" />
-            <van-cell title="我的商标" :value="markCount" is-link
+            <van-cell title="我的商标" is-link
               @click="changePopupLogin(true)" />
         </van-cell-group>
 
@@ -159,12 +159,8 @@ export default {
   },
   data() {
     return {
-      user_id: '',
-      user_name: '',
-      user_figure: '',
       user_balance: '',
       user_score: '',
-      is_signed: '',
       unreadCount: '',
       orderCount: '',
       domainCount: '',
@@ -173,30 +169,16 @@ export default {
     };
   },
   computed: {
-    user_phone: {
+    userinfo: {
       get() {
-        const { userinfo } = this.$store.state;
-        if (userinfo !== undefined && userinfo.user_phone !== '') {
-          return this.$store.state.userinfo.user_phone;
-        }
-        return '';
-      },
-      set() {},
-    },
-    user_token: {
-      get() {
-        const { userinfo } = this.$store.state;
-        if (userinfo !== undefined && userinfo.user_token !== '') {
-          return this.$store.state.userinfo.user_token;
-        }
-        return '';
+        return this.$store.state.userinfo;
       },
       set() {},
     },
   },
   mounted() {
     const that = this;
-    if (that.user_phone !== '' && that.user_token !== '') {
+    if (that.userinfo !== undefined) {
       that.load_myConsole();
     }
   },
@@ -209,17 +191,13 @@ export default {
       const that = this;
       that.$http
         .post('/api/get_myConsole', that.$qs.stringify({
-          phone: that.user_phone,
-          token: that.user_token,
+          phone: that.userinfo.user_phone,
+          token: that.userinfo.user_token,
         }))
         .then(({ data }) => {
           if (!data.state) {
-            that.user_id = data.userinfo.user_id;
-            that.user_name = data.userinfo.user_name;
-            that.user_figure = data.userinfo.user_figure;
             that.user_balance = data.userinfo.user_balance;
             that.user_score = data.userinfo.user_score;
-            that.is_signed = data.is_signed;
             that.unreadCount = data.unreadCount;
             that.orderCount = data.orderCount;
             that.domainCount = data.domainCount;
@@ -231,7 +209,6 @@ export default {
     logoutSuccess() {
       const that = this;
       that.logout();
-      that.user_id = '';
     },
   },
 };
