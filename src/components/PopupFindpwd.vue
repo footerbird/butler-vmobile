@@ -76,17 +76,78 @@ export default {
     ...mapMutations([
       'changePopupFindpwd',
     ]),
-    checkPhoneRegister() {
-
+    checkPhoneRegister(regCall, unregCall) {
+      const that = this;
+      that.$http
+        .post('/api/check_phoneRegisterAjax', that.$qs.stringify({
+          phone: that.phone_find,
+        }))
+        .then(({ data }) => {
+          if (data.state === 'reg') {
+            regCall();
+          } else {
+            unregCall();
+          }
+        });
     },
-    sendCode() {
-
+    time(seconds) {
+      const that = this;
+      seconds -= 1;
+      if (seconds < 0) {
+        that.sending_code = false;
+        that.code_msg = '获取验证码';
+        return false;
+      }
+      that.code_msg = `发送成功(${seconds})`;
+      setTimeout(() => {
+        that.time(seconds);
+      }, 1000);
+    },
+    sendCode(seconds) {
+      const that = this;
+      if (that.forbid_code_btn) return false;
+      that.$http
+        .post('/api/send_smsCodeAjax', that.$qs.stringify({
+          phone: that.phone_find,
+        }))
+        .then(({ data }) => {
+          if (data.state === 'success') {
+            that.sending_code = true;
+            that.time(seconds);
+          } else {
+            that.$toast(data.msg);
+          }
+        });
     },
     sendCodeFindpwd() {
-
+      const that = this;
+      that.checkPhoneRegister(() => {
+        that.sendCode(60);
+      }, () => {
+        that.$toast('手机号未注册');
+      });
     },
     funcFindpwd() {
-
+      const that = this;
+      if (that.forbid_findpwd_btn) return false;
+      that.sending_findpwd = true;
+      that.$http
+        .post('/api/send_phoneFindpwdAjax', that.$qs.stringify({
+          phone_find: that.phone_find,
+          pwd_find: that.pwd_find,
+          code_find: that.code_find,
+        }))
+        .then(({ data }) => {
+          that.sending_findpwd = false;
+          if (data.state === 'success') {
+            that.$toast(data.msg);
+            setTimeout(() => {
+              that.changePopupFindpwd(false);
+            }, 2000);
+          } else {
+            that.$toast(data.msg);
+          }
+        });
     },
   },
 };

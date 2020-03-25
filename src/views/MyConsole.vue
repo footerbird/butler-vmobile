@@ -11,7 +11,7 @@
             </a>
             <div class="account-header-info">
                 <a class="account-header-figure">
-                    <template v-if="userinfo.user_figure == ''">
+                    <template v-if="!userinfo.user_figure">
                     <img src="../assets/images/user-figure.png" />
                     </template>
                     <template v-else>
@@ -135,7 +135,7 @@
 
     <tabbar path="my_console"></tabbar>
     <popup-login @loginSuccess="load_myConsole"></popup-login>
-    <popup-register></popup-register>
+    <popup-register @registerSuccess="load_myConsole"></popup-register>
     <popup-findpwd></popup-findpwd>
 
 </div>

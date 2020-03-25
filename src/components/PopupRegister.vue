@@ -74,19 +74,85 @@ export default {
   },
   methods: {
     ...mapMutations([
+      'login',
       'changePopupRegister',
     ]),
-    checkPhoneRegister() {
-
+    checkPhoneRegister(regCall, unregCall) {
+      const that = this;
+      that.$http
+        .post('/api/check_phoneRegisterAjax', that.$qs.stringify({
+          phone: that.phone_reg,
+        }))
+        .then(({ data }) => {
+          if (data.state === 'reg') {
+            regCall();
+          } else {
+            unregCall();
+          }
+        });
     },
-    sendCode() {
-
+    time(seconds) {
+      const that = this;
+      seconds -= 1;
+      if (seconds < 0) {
+        that.sending_code = false;
+        that.code_msg = '获取验证码';
+        return false;
+      }
+      that.code_msg = `发送成功(${seconds})`;
+      setTimeout(() => {
+        that.time(seconds);
+      }, 1000);
+    },
+    sendCode(seconds) {
+      const that = this;
+      if (that.forbid_code_btn) return false;
+      that.$http
+        .post('/api/send_smsCodeAjax', that.$qs.stringify({
+          phone: that.phone_reg,
+        }))
+        .then(({ data }) => {
+          if (data.state === 'success') {
+            that.sending_code = true;
+            that.time(seconds);
+          } else {
+            that.$toast(data.msg);
+          }
+        });
     },
     sendCodeRegister() {
-
+      const that = this;
+      that.checkPhoneRegister(() => {
+        that.$toast('手机号已注册');
+      }, () => {
+        that.sendCode(60);
+      });
     },
     funcRegister() {
-
+      const that = this;
+      if (that.forbid_register_btn) return false;
+      that.sending_register = true;
+      that.$http
+        .post('/api/send_phoneRegisterAjax', that.$qs.stringify({
+          phone_reg: that.phone_reg,
+          pwd_reg: that.pwd_reg,
+          code_reg: that.code_reg,
+          ip_address: '',
+          city_address: '',
+        }))
+        .then(({ data }) => {
+          that.sending_register = false;
+          if (data.state === 'success') {
+            that.$toast(data.msg);
+            that.login(data.userinfo);
+            that.$emit('registerSuccess');
+            setTimeout(() => {
+              that.changePopupRegister(false);
+            }, 2000);
+          } else {
+            that.$toast(data.msg);
+          }
+        });
     },
   },
 };
