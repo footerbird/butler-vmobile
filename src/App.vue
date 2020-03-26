@@ -22,6 +22,7 @@ html,body {
 body {
   font-size:16px;
   color:#333;
+  line-height: 1.6;
   font-family:-apple-system-font,arial,verdana,helvetica,'PingFang SC','HanHei SC',
   STHeitiSC-Light,Microsoft Yahei,sans-serif;
   background:#f7f7f7;
