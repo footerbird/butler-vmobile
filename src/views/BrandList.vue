@@ -97,6 +97,20 @@ export default {
         color: #000;
         padding: 15px;
         position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            right: 0;
+            height: 1px;
+            border-top: 1px solid #e5e5e5;
+            color: #e5e5e5;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        }
         .brand-item__bd{
             .flex-number;
             .brand-item__title{
