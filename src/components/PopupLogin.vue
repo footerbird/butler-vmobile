@@ -31,12 +31,11 @@
                       </template>
                     </van-field>
                 </van-cell-group>
-                <div style="position: relative;">
+                <div style="position: relative; padding-top: 1.2rem;">
                     <a class="login-forget-pwd"
                       @click="changePopupFindpwd(true)">忘记密码？</a>
                     <van-button type="primary" color="#ea6f5a" class="f18"
                       :disabled="forbid_login_btn" block :loading="sending_login"
-                      style="margin-top: 1.2rem;"
                       @click="funcLogin">登录</van-button>
                 </div>
                 <div class="login-link-box">
@@ -264,7 +263,7 @@ export default {
     }
     .login-forget-pwd{
         position: absolute;
-        top: -.8rem;
+        top: .4rem;
         right: 0;
         font-size: 14px;
         color: #5195d5;

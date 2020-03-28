@@ -23,10 +23,11 @@
                     <van-field v-model="pwd_reg" type="password" clearable
                       class="login-input" placeholder="设置密码" />
                 </van-cell-group>
-                <van-button type="primary" color="#ea6f5a" class="f18"
-                  :disabled="forbid_register_btn" block :loading="sending_register"
-                  style="margin-top: 1.2rem;"
-                  @click="funcRegister">注册</van-button>
+                <div style="position: relative; padding-top: 1.2rem;">
+                    <van-button type="primary" color="#ea6f5a" class="f18"
+                      :disabled="forbid_register_btn" block :loading="sending_register"
+                      @click="funcRegister">注册</van-button>
+                </div>
             </div>
         </div>
         <div class="modal-footer">
@@ -225,7 +226,7 @@ export default {
     }
     .login-forget-pwd{
         position: absolute;
-        top: -.8rem;
+        top: .4rem;
         right: 0;
         font-size: 14px;
         color: #5195d5;

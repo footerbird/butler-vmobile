@@ -23,10 +23,11 @@
                     <van-field v-model="pwd_find" type="password" clearable
                       class="login-input" placeholder="重设密码" />
                 </van-cell-group>
-                <van-button type="primary" color="#ea6f5a" class="f18"
-                  :disabled="forbid_findpwd_btn" block :loading="sending_findpwd"
-                  style="margin-top: 1.2rem;"
-                  @click="funcFindpwd">完成</van-button>
+                <div style="position: relative; padding-top: 1.2rem;">
+                    <van-button type="primary" color="#ea6f5a" class="f18"
+                      :disabled="forbid_findpwd_btn" block :loading="sending_findpwd"
+                      @click="funcFindpwd">完成</van-button>
+                </div>
             </div>
         </div>
         <div class="modal-footer">
@@ -220,7 +221,7 @@ export default {
     }
     .login-forget-pwd{
         position: absolute;
-        top: -.8rem;
+        top: .4rem;
         right: 0;
         font-size: 14px;
         color: #5195d5;
