@@ -5,6 +5,8 @@
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
+const path = require('path');
+
 module.exports = appInfo => {
   /**
    * built-in config
@@ -17,6 +19,12 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
+
+  // 静态资源配置，设置成打包文件生成的路径
+  config.static = {
+    prefix: '/',
+    dir: path.join(appInfo.baseDir, 'dist'),
+  };
 
   // add your user config here
   const userConfig = {
