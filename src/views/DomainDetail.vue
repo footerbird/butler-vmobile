@@ -62,6 +62,8 @@
 </template>
 
 <script>
+const moment = require('moment');
+
 export default {
   name: 'DomainDetail',
   filters: {
@@ -69,7 +71,7 @@ export default {
       return parseInt(value, 10).toLocaleString();
     },
     date_format(value) {
-      return value.substr(0, 10);
+      return moment(value).format('YYYY-MM-DD');
     },
   },
   data() {
