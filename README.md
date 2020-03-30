@@ -10,5 +10,6 @@
   "linebreak-style": 0, // 关闭换行符报错
   "prefer-destructuring": 0, //关闭数组或对象不能强制解构,宁愿销毁的报错,
   "no-multi-assign": 0 // 关闭链式赋值的报错
+  "no-await-in-loop": 0 //关闭不能再循环中使用await的报错
 }
 ```

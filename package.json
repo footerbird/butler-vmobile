@@ -54,7 +54,8 @@
       "consistent-return": 0,
       "linebreak-style": 0,
       "prefer-destructuring": 0,
-      "no-multi-assign": 0
+      "no-multi-assign": 0,
+      "no-await-in-loop": 0
     }
   },
   "browserslist": [

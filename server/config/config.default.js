@@ -26,6 +26,33 @@ module.exports = appInfo => {
     dir: path.join(appInfo.baseDir, 'dist'),
   };
 
+  // 配置数据库
+  config.mysql = {
+    // 单数据库信息配置
+    client: {
+      // host
+      host: '',
+      // 端口号
+      port: '10031',
+      // 用户名
+      user: 'root',
+      // 密码
+      password: 'pass365waitui',
+      // 数据库名
+      database: 'butler',
+    },
+    // 是否加载到 app 上，默认开启
+    app: true,
+    // 是否加载到 agent 上，默认关闭
+    agent: false,
+  };
+
+  config.security = {
+    csrf: {
+      enable: false, // 关闭csrf安全防范
+    },
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
