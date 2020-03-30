@@ -10,12 +10,16 @@ import { getStore } from './util/util';
 
 Vue.prototype.$http = axios;
 Vue.prototype.$qs = qs;
+Vue.prototype.$title = '品牌生活广场，传递品牌价值 | 外推网';
 
 FastClick.attach(document.body);
 
 Vue.config.productionTip = false;
 
 router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title;
+  }
   // 如果localStorage中有用户信息但是state中没有，则将localStorage中的用户信息赋给state
   if (getStore('userinfo') && !store.state.userinfo) {
     // 如果localStorage中的登录信息超时，超过一天，则清除localStorage中的用户信息

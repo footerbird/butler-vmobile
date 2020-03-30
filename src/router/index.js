@@ -20,63 +20,99 @@ const routes = [
     path: '/',
     name: 'Index',
     component: Index,
+    meta: {
+      title: '品牌生活广场，传递品牌价值 | 外推网',
+    },
   },
   {
     path: '/domain_list',
     name: 'DomainList',
     component: DomainList,
+    meta: {
+      title: '域名市场 - 域名交易就是这么简单 | 外推网',
+    },
   },
   {
     path: '/domain_detail/:domain_name_str',
     name: 'DomainDetail',
     component: DomainDetail,
+    meta: {
+      title: '域名详情页 | 外推网',
+    },
   },
   {
     path: '/mark_list',
     name: 'MarkList',
     component: MarkList,
+    meta: {
+      title: '商标市场 - 让商标转让更简单 | 外推网',
+    },
   },
   {
     path: '/mark_detail/:regno_md',
     name: 'MarkDetail',
     component: MarkDetail,
+    meta: {
+      title: '商标详情页 | 外推网',
+    },
   },
   {
     path: '/company_list',
     name: 'CompanyList',
     component: CompanyList,
+    meta: {
+      title: '企业名录 - 企业工商信息一手掌握 | 外推网',
+    },
   },
   {
     // 这里一定要加注释或者后面的参数不能为company_id,不然eslint报错,不知道为什么
     path: '/company_detail/:company_id',
     name: 'CompanyDetail',
     component: CompanyDetail,
+    meta: {
+      title: '企业详情页 | 外推网',
+    },
   },
   {
     path: '/brand_list',
     name: 'BrandList',
     component: BrandList,
+    meta: {
+      title: '品牌大全 - 中国品牌推荐 | 外推网',
+    },
   },
   {
     path: '/brand_detail/:brand_id',
     name: 'BrandDetail',
     component: BrandDetail,
+    meta: {
+      title: '品牌详情页 | 外推网',
+    },
   },
   {
     path: '/intention_domain',
     name: 'IntentionDomain',
     component: IntentionDomain,
+    meta: {
+      title: '提交域名意向 | 外推网',
+    },
   },
   {
     path: '/intention_mark',
     name: 'IntentionMark',
     component: IntentionMark,
+    meta: {
+      title: '提交商标意向 | 外推网',
+    },
   },
   {
     // 这里一定要加注释,不然eslint报错,不知道为什么
     path: '/my_console',
     name: 'MyConsole',
     component: MyConsole,
+    meta: {
+      title: '控制台 | 外推网',
+    },
   },
   {
     path: '/about',
@@ -85,6 +121,9 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    meta: {
+      title: '关于我们 | 外推网',
+    },
   },
   {
     path: '/agreement',
@@ -93,6 +132,9 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Agreement.vue'),
+    meta: {
+      title: '用户协议 | 外推网',
+    },
   },
 ];
 
