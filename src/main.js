@@ -10,7 +10,6 @@ import { getStore } from './util/util';
 
 Vue.prototype.$http = axios;
 Vue.prototype.$qs = qs;
-Vue.prototype.$title = '品牌生活广场，传递品牌价值 | 外推网';
 
 FastClick.attach(document.body);
 

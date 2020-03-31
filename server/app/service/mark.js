@@ -35,6 +35,16 @@ class MarkService extends Service {
     return query[0];
   }
 
+  async get_myMarkCount(user_id, keyword) {
+    const { app } = this;
+    let sql = '';
+    sql += `select count(*) as total from mark_info  where mark_userid = 
+      ${user_id} and concat(mark_regno,mark_name,app_range) like '%${keyword}%'`;
+
+    const query = await app.mysql.query(sql);
+    return query[0].total;
+  }
+
 }
 
 module.exports = MarkService;

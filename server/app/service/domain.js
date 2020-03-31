@@ -26,6 +26,17 @@ class DomainService extends Service {
     return query[0];
   }
 
+  async get_myDomainCount(user_id, keyword) {
+    const { app } = this;
+    let sql = '';
+    sql += `select count(*) as total from domain_info where domain_userid = 
+      ${user_id} and concat(domain_name,register_registrar,domain_summary) 
+      like '%${keyword}%'`;
+
+    const query = await app.mysql.query(sql);
+    return query[0].total;
+  }
+
 }
 
 module.exports = DomainService;

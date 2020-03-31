@@ -22,13 +22,13 @@ module.exports = app => {
   router.post('/api/get_brandAjax', controller.brand.get_brandAjax);
   router.post('/api/get_brandDetail', controller.brand.get_brandDetail);
 
-  // // 用户相关
-  // router.post('/api/get_myConsole', controller.user.get_myConsole);
-  // router.post('/api/send_smsCodeAjax', controller.user.send_smsCodeAjax);
-  // router.post('/api/check_phoneRegisterAjax', controller.user.check_phoneRegisterAjax);
-  // router.post('/api/send_phoneLoginAjax', controller.user.send_phoneLoginAjax);
-  // router.post('/api/send_phoneRegisterAjax', controller.user.send_phoneRegisterAjax);
-  // router.post('/api/send_phoneFindpwdAjax', controller.user.send_phoneFindpwdAjax);
+  // 用户相关
+  router.post('/api/check_phoneRegisterAjax', controller.user.check_phoneRegisterAjax);
+  router.post('/api/send_smsCodeAjax', controller.user.send_smsCodeAjax);
+  router.post('/api/send_phoneLoginAjax', controller.user.send_phoneLoginAjax);
+  router.post('/api/send_phoneRegisterAjax', controller.user.send_phoneRegisterAjax);
+  router.post('/api/send_phoneFindpwdAjax', controller.user.send_phoneFindpwdAjax);
+  router.post('/api/get_myConsole', controller.user.get_myConsole);
 
   // 上面的路由为api路由，其他路由都指到静态文件/dist/index.html
   router.get('/*', controller.home.index);

@@ -11,7 +11,9 @@
     "egg-mysql": "^3.0.0",
     "egg-scripts": "^2.11.0",
     "js-base64": "^2.5.2",
-    "moment": "^2.24.0"
+    "js-md5": "^0.7.3",
+    "moment": "^2.24.0",
+    "tencentcloud-sdk-nodejs": "^3.0.143"
   },
   "devDependencies": {
     "autod": "^3.0.1",
