@@ -9,8 +9,6 @@ import CompanyList from '../views/CompanyList.vue';
 import CompanyDetail from '../views/CompanyDetail.vue';
 import BrandList from '../views/BrandList.vue';
 import BrandDetail from '../views/BrandDetail.vue';
-import IntentionDomain from '../views/IntentionDomain.vue';
-import IntentionMark from '../views/IntentionMark.vue';
 import MyConsole from '../views/MyConsole.vue';
 
 Vue.use(VueRouter);
@@ -90,17 +88,17 @@ const routes = [
     },
   },
   {
-    path: '/intention_domain',
+    path: '/intention/domain',
     name: 'IntentionDomain',
-    component: IntentionDomain,
+    component: () => import('../views/intention/IntentionDomain.vue'),
     meta: {
       title: '提交域名意向 | 外推网',
     },
   },
   {
-    path: '/intention_mark',
+    path: '/intention/mark',
     name: 'IntentionMark',
-    component: IntentionMark,
+    component: () => import('../views/intention/IntentionMark.vue'),
     meta: {
       title: '提交商标意向 | 外推网',
     },
