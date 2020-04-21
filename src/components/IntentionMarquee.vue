@@ -14,15 +14,14 @@ export default {
   methods: {
     showMarqueeLeft(time) {
       const that = this;
-      const wait = time?time:25;
+      const wait = time || 25;
       const scroll = that.$refs.summary_marquee;
-      let scrollIndex;
-      scrollIndex = setInterval(function(){
-          if(Math.abs(scroll.scrollWidth-scroll.clientWidth-scroll.scrollLeft) < 1){
-              scroll.scrollLeft = 1;
-          }
-          scroll.scrollLeft+=1;
-      },wait);
+      setInterval(() => {
+        if (Math.abs(scroll.scrollWidth - scroll.clientWidth - scroll.scrollLeft) < 1) {
+          scroll.scrollLeft = 1;
+        }
+        scroll.scrollLeft += 1;
+      }, wait);
     },
   },
 };

@@ -9,6 +9,30 @@ import CompanyList from '../views/CompanyList.vue';
 import CompanyDetail from '../views/CompanyDetail.vue';
 import BrandList from '../views/BrandList.vue';
 import BrandDetail from '../views/BrandDetail.vue';
+import IntentionDomain from '../views/intention/IntentionDomain.vue';
+import IntentionMark from '../views/intention/IntentionMark.vue';
+import IntentionSbsj from '../views/intention/IntentionSbsj.vue';
+import IntentionBhfs from '../views/intention/IntentionBhfs.vue';
+import IntentionGjsb from '../views/intention/IntentionGjsb.vue';
+import IntentionSbbg from '../views/intention/IntentionSbbg.vue';
+import IntentionSbzr from '../views/intention/IntentionSbzr.vue';
+import IntentionSbxz from '../views/intention/IntentionSbxz.vue';
+import IntentionXkba from '../views/intention/IntentionXkba.vue';
+import IntentionBzcz from '../views/intention/IntentionBzcz.vue';
+import IntentionSbyy from '../views/intention/IntentionSbyy.vue';
+import IntentionSbcx from '../views/intention/IntentionSbcx.vue';
+import IntentionWxxg from '../views/intention/IntentionWxxg.vue';
+import IntentionYydb from '../views/intention/IntentionYydb.vue';
+import IntentionCxdb from '../views/intention/IntentionCxdb.vue';
+import IntentionWxdb from '../views/intention/IntentionWxdb.vue';
+import IntentionGszc from '../views/intention/IntentionGszc.vue';
+import IntentionCsjz from '../views/intention/IntentionCsjz.vue';
+import IntentionGwjz from '../views/intention/IntentionGwjz.vue';
+import IntentionVisj from '../views/intention/IntentionVisj.vue';
+import IntentionPpzx from '../views/intention/IntentionPpzx.vue';
+import IntentionPptg from '../views/intention/IntentionPptg.vue';
+import IntentionPpwq from '../views/intention/IntentionPpwq.vue';
+import IntentionPpyy from '../views/intention/IntentionPpyy.vue';
 import MyConsole from '../views/MyConsole.vue';
 
 Vue.use(VueRouter);
@@ -90,7 +114,7 @@ const routes = [
   {
     path: '/intention/domain',
     name: 'IntentionDomain',
-    component: () => import('../views/intention/IntentionDomain.vue'),
+    component: IntentionDomain,
     meta: {
       title: '域名代理服务 | 外推网',
     },
@@ -98,7 +122,7 @@ const routes = [
   {
     path: '/intention/mark',
     name: 'IntentionMark',
-    component: () => import('../views/intention/IntentionMark.vue'),
+    component: IntentionMark,
     meta: {
       title: '商标代理服务 | 外推网',
     },
@@ -106,7 +130,7 @@ const routes = [
   {
     path: '/intention/sbsj',
     name: 'IntentionSbsj',
-    component: () => import('../views/intention/IntentionSbsj.vue'),
+    component: IntentionSbsj,
     meta: {
       title: '商标设计 | 外推网',
     },
@@ -114,7 +138,7 @@ const routes = [
   {
     path: '/intention/bhfs',
     name: 'IntentionBhfs',
-    component: () => import('../views/intention/IntentionBhfs.vue'),
+    component: IntentionBhfs,
     meta: {
       title: '商标驳回复审 | 外推网',
     },
@@ -122,7 +146,7 @@ const routes = [
   {
     path: '/intention/gjsb',
     name: 'IntentionGjsb',
-    component: () => import('../views/intention/IntentionGjsb.vue'),
+    component: IntentionGjsb,
     meta: {
       title: '国际商标 | 外推网',
     },
@@ -130,7 +154,7 @@ const routes = [
   {
     path: '/intention/sbbg',
     name: 'IntentionSbbg',
-    component: () => import('../views/intention/IntentionSbbg.vue'),
+    component: IntentionSbbg,
     meta: {
       title: '商标变更 | 外推网',
     },
@@ -138,7 +162,7 @@ const routes = [
   {
     path: '/intention/sbzr',
     name: 'IntentionSbzr',
-    component: () => import('../views/intention/IntentionSbzr.vue'),
+    component: IntentionSbzr,
     meta: {
       title: '商标转让 | 外推网',
     },
@@ -146,7 +170,7 @@ const routes = [
   {
     path: '/intention/sbxz',
     name: 'IntentionSbxz',
-    component: () => import('../views/intention/IntentionSbxz.vue'),
+    component: IntentionSbxz,
     meta: {
       title: '商标续展 | 外推网',
     },
@@ -154,7 +178,7 @@ const routes = [
   {
     path: '/intention/xkba',
     name: 'IntentionXkba',
-    component: () => import('../views/intention/IntentionXkba.vue'),
+    component: IntentionXkba,
     meta: {
       title: '商标许可备案 | 外推网',
     },
@@ -162,7 +186,7 @@ const routes = [
   {
     path: '/intention/bzcz',
     name: 'IntentionBzcz',
-    component: () => import('../views/intention/IntentionBzcz.vue'),
+    component: IntentionBzcz,
     meta: {
       title: '补注册证 | 外推网',
     },
@@ -170,7 +194,7 @@ const routes = [
   {
     path: '/intention/sbyy',
     name: 'IntentionSbyy',
-    component: () => import('../views/intention/IntentionSbyy.vue'),
+    component: IntentionSbyy,
     meta: {
       title: '商标异议 | 外推网',
     },
@@ -178,7 +202,7 @@ const routes = [
   {
     path: '/intention/sbcx',
     name: 'IntentionSbcx',
-    component: () => import('../views/intention/IntentionSbcx.vue'),
+    component: IntentionSbcx,
     meta: {
       title: '商标撤销 | 外推网',
     },
@@ -186,7 +210,7 @@ const routes = [
   {
     path: '/intention/wxxg',
     name: 'IntentionWxxg',
-    component: () => import('../views/intention/IntentionWxxg.vue'),
+    component: IntentionWxxg,
     meta: {
       title: '商标无效宣告 | 外推网',
     },
@@ -194,7 +218,7 @@ const routes = [
   {
     path: '/intention/yydb',
     name: 'IntentionYydb',
-    component: () => import('../views/intention/IntentionYydb.vue'),
+    component: IntentionYydb,
     meta: {
       title: '异议答辩 | 外推网',
     },
@@ -202,7 +226,7 @@ const routes = [
   {
     path: '/intention/cxdb',
     name: 'IntentionCxdb',
-    component: () => import('../views/intention/IntentionCxdb.vue'),
+    component: IntentionCxdb,
     meta: {
       title: '撤销答辩 | 外推网',
     },
@@ -210,7 +234,7 @@ const routes = [
   {
     path: '/intention/wxdb',
     name: 'IntentionWxdb',
-    component: () => import('../views/intention/IntentionWxdb.vue'),
+    component: IntentionWxdb,
     meta: {
       title: '无效宣告答辩 | 外推网',
     },
@@ -218,7 +242,7 @@ const routes = [
   {
     path: '/intention/gszc',
     name: 'IntentionGszc',
-    component: () => import('../views/intention/IntentionGszc.vue'),
+    component: IntentionGszc,
     meta: {
       title: '公司注册 | 外推网',
     },
@@ -226,7 +250,7 @@ const routes = [
   {
     path: '/intention/csjz',
     name: 'IntentionCsjz',
-    component: () => import('../views/intention/IntentionCsjz.vue'),
+    component: IntentionCsjz,
     meta: {
       title: '财税记账 | 外推网',
     },
@@ -234,7 +258,7 @@ const routes = [
   {
     path: '/intention/gwjz',
     name: 'IntentionGwjz',
-    component: () => import('../views/intention/IntentionGwjz.vue'),
+    component: IntentionGwjz,
     meta: {
       title: '官网建站与小程序开发 | 外推网',
     },
@@ -242,7 +266,7 @@ const routes = [
   {
     path: '/intention/visj',
     name: 'IntentionVisj',
-    component: () => import('../views/intention/IntentionVisj.vue'),
+    component: IntentionVisj,
     meta: {
       title: '企业VI形象视觉设计 | 外推网',
     },
@@ -250,7 +274,7 @@ const routes = [
   {
     path: '/intention/ppzx',
     name: 'IntentionPpzx',
-    component: () => import('../views/intention/IntentionPpzx.vue'),
+    component: IntentionPpzx,
     meta: {
       title: '品牌发展咨询 | 外推网',
     },
@@ -258,7 +282,7 @@ const routes = [
   {
     path: '/intention/pptg',
     name: 'IntentionPptg',
-    component: () => import('../views/intention/IntentionPptg.vue'),
+    component: IntentionPptg,
     meta: {
       title: '品牌营销推广 | 外推网',
     },
@@ -266,7 +290,7 @@ const routes = [
   {
     path: '/intention/ppwq',
     name: 'IntentionPpwq',
-    component: () => import('../views/intention/IntentionPpwq.vue'),
+    component: IntentionPpwq,
     meta: {
       title: '品牌确权维权 | 外推网',
     },
@@ -274,7 +298,7 @@ const routes = [
   {
     path: '/intention/ppyy',
     name: 'IntentionPpyy',
-    component: () => import('../views/intention/IntentionPpyy.vue'),
+    component: IntentionPpyy,
     meta: {
       title: '品牌代运营 | 外推网',
     },
@@ -294,6 +318,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
+    // 懒加载，当路由被访问时才会加载相应的css和js，项目打包的时候会多生成一个相应的css和js文件
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     meta: {
       title: '关于我们 | 外推网',
@@ -305,6 +330,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
+    // 懒加载，当路由被访问时才会加载相应的css和js，项目打包的时候会多生成一个相应的css和js文件
     component: () => import(/* webpackChunkName: "about" */ '../views/Agreement.vue'),
     meta: {
       title: '用户协议 | 外推网',
@@ -316,6 +342,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
+    // 懒加载，当路由被访问时才会加载相应的css和js，项目打包的时候会多生成一个相应的css和js文件
     component: () => import(/* webpackChunkName: "about" */ '../views/Problem.vue'),
     meta: {
       title: '常见问题 | 外推网',
