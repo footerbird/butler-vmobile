@@ -149,7 +149,7 @@ export default {
 <style lang="less" scoped="scoped">
 .vant-article{
     padding: 20px 15px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
     background-color: #fff;
     color: #3d464d;

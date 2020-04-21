@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>撤销答辩</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,19 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
-                <div class="price"></div>
+                 alt="外推网商标撤销答辩服务" />
+                <div class="price"><i>¥</i><font>2500</font><i>/件</i></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>适用于商标被他人申请撤销，（在规定时效内）向商标局提交答辩申请，以保留
+            商标的使用权的用户&nbsp;&nbsp;&nbsp;&nbsp;适用于商标被他人申请撤销，（在规定时效内）向商
+            标局提交答辩申请，以保留商标的使用权的用户
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,28 +37,48 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>对于他人出于保护而非使用目的注册的防御商标，以及被核准注册达三年以上而又从未实际
+                    使用过的商标，任何单位或者个人均可向商标局递交撤销申请，为自己的商标申请或品牌保护扫
+                    清障碍。 撤三申请的成功概率很高，原因在于： 1、商标权利人提供符合法律要求的完整使用
+                    证据较难； 2、很多商标权利人可能已经变更名称、地址等信息，但未及时向商标局递交信息变
+                    更申请，导致商标权利人无法收到答辩通知而无法在法定期限内作出书面答辩。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
             <div class="intention-flow pt20">
                 <div class="intention-title"><span>服务流程</span></div>
                 <div class="intention-sub-title">SERVICE PROCESS</div>
-                <div class="flow-step flow-step4">
+                <div class="flow-step flow-step7">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
-                    <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-2"><p>专业代理人分析<br>撤销理由并评估</p></div>
+                    <div class="step-cell step-cell-3"><p>外推网业务下单<br>并成功付款</p></div>
+                    <div class="step-cell step-cell-4"><p>准备撤销答辩材料</p></div>
+                    <div class="step-cell step-cell-5"><p>向商标局提交<br>答辩材料及证据</p></div>
+                    <div class="step-cell step-cell-6"><p>官方审查</p></div>
+                    <div class="step-cell step-cell-7"><p>官方下发裁决</p></div>
                 </div>
             </div>
+            <article class="vant-article">
+                <section>
+                    <div class="intention-title"><span>常见问题</span></div>
+                    <div class="intention-sub-title">COMMON PROBLEMS</div>
+                    <h4>Q：为什么要做撤三答辩？</h4>
+                    <p><strong>A：</strong>自己的注册商标被他人提出撤三申请，权利人撤三答辩的目的是为了争取
+                    自己的注册商标不被他人顺利撤销，保护自己的品牌权益。专业的答辩会增加注册商标不被撤销的成功
+                    率，如果不作答辩将让审理员更加偏向于申请人，该注册商标很可能就会被撤销掉，从而权利人将会失
+                    去该注册商标的一切权益。</p>
+                    <h4>Q：什么时候需要做商标撤三答辩？</h4>
+                    <p><strong>A：</strong>商标注册人收到商标局下发的《关于提供注册商标使用证据的通知》之日
+                    （以收到信函的邮戳日期）起2个月内向商标局进行商标撤三答辩并递交相关使用证据材料。</p>
+                    <h4>Q：商标注册人做撤三答辩除了基本申请材料以外，还需要的主要证据有哪些？</h4>
+                    <p><strong>A：</strong>主要证据包括但不限于:企业或个人资质及荣誉方面材料；广告宣传资料、
+                    宣传册或产品包装印刷合同及发票；合同、销售发票；参展服务合同及发票、展会照片等等。</p>
+                    <h4>Q：撤三答辩的成功几率有多大？</h4>
+                    <p><strong>A：</strong>答辩人准备的材料越齐全、证据越充分，成功的几率就会越大。所以企业
+                    有必要保留公司的广告宣传，销售发票等材料，特别是在日常的工作中应该将自己的注册商标有效用起来，
+                    才能避免被他人成功撤销。</p>
+                </section>
+            </article>
 
             <div class="ta-c pb20">
                 <div class="customer-service">联系品牌客服 - 小智&nbsp;&nbsp;18767172019</div>
@@ -81,7 +100,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionCxdb',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +110,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'mark',
+      intention_product: '撤销答辩',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +127,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;

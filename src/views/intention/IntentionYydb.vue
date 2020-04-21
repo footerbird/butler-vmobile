@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>异议答辩</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,19 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
-                <div class="price"></div>
+                 alt="外推网商标异议答辩服务" />
+                <div class="price"><i>¥</i><font>3500</font><i>/件</i></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>适用于商标注册公示期被他人提出异议，（在规定时效内）希望提交答辩申请，以挽回
+            注册的用户&nbsp;&nbsp;&nbsp;&nbsp;适用于商标注册公示期被他人提出异议，（在规定时效内）希望提交
+            答辩申请，以挽回注册的用户
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,28 +37,65 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>商标局在受理商标异议申请后，会及时将异议人的“商标异议申请书”及异议理由和证据材料等
+                    的副本送交被异议人，限定被异议人在收到商标异议书等副本之日起30日内答辩，被异议人在限定
+                    期限内未作出书面答辩的，视为放弃答辩权利，异议程序照常进行。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
             <div class="intention-flow pt20">
                 <div class="intention-title"><span>服务流程</span></div>
                 <div class="intention-sub-title">SERVICE PROCESS</div>
-                <div class="flow-step flow-step4">
+                <div class="flow-step flow-step7">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
-                    <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-2"><p>专业代理人分析<br>异议理由并评估</p></div>
+                    <div class="step-cell step-cell-3"><p>外推网业务下单<br>并成功付款</p></div>
+                    <div class="step-cell step-cell-4"><p>准备异议答辩材料</p></div>
+                    <div class="step-cell step-cell-5"><p>向商标局提交<br>答辩材料申请</p></div>
+                    <div class="step-cell step-cell-6"><p>官方审查</p></div>
+                    <div class="step-cell step-cell-7"><p>官方下发裁决</p></div>
                 </div>
             </div>
+            <article class="vant-article">
+                <section>
+                    <div class="intention-title"><span>常见问题</span></div>
+                    <div class="intention-sub-title">COMMON PROBLEMS</div>
+                    <h4>Q：商标被异议为什么要做答辩？</h4>
+                    <p><strong>A：</strong>1、若放弃答辩将直接面临商标被不予核准注册的风险；
+                        2、商标异议答辩是商标法赋予当事人的法定权利，同时也是当事人向商标局反驳异议方观点的
+                        唯一途径。
+                        3、商标异议答辩其实是商标申请人陈述理由的机会，其意义在于阐明所申请商标的来源，以为
+                        自己在商标异议裁定中争取有利因素；
+                        如果放弃答辩，商标局将会依法对商标进行裁定，作为商标申请人若不答辩，就等于白白放弃了
+                        为所申请商标进行争取注册的机会。
+                    </p>
+                    <h4>Q：商标被异议，收到商标局发出的“商标异议答辩通知书”后该怎么办？</h4>
+                    <p><strong>A：</strong>1、及时保存好《商标异议答辩通知书》的原件和邮寄信封，并确定提
+                    交答辩材料的截止日期；
+                        2、及时咨询外推网商标顾问，分析商标被异议原因并评估风险；
+                        3、制定商标异议答辩策略，并收集和整理有利证据；
+                        4、及时提交商标异议答辩材料。
+                    </p>
+                    <h4>Q：什么时候需要作出商标异议答辩？</h4>
+                    <p><strong>A：</strong>商标申请人在收到官方下发的《异议答辩通知书》（以收到信函的邮戳
+                    日期）起30天内需要向国家商标局提交商标异议答辩材料。，若未在30日内递交答辩材料，不影响案
+                    件的正常审查。</p>
+                    <h4>Q：答辩人向官方提出商标异议答辩除了基本申请材料以外，还需要哪些材料？</h4>
+                    <p><strong>A：</strong>主要材料包括但不限于:企业或个人资质及荣誉方面材料；广告宣传资
+                    料、宣传册或产品包装印刷合同及发票；合同、销售发票；参展服务合同及发票、展会照片等。</p>
+                    <h4>Q：商标异议申请和商标异议答辩的区别？</h4>
+                    <p><strong>A：</strong>商标异议申请是对他人进入初审公告的商标持有反对意见，阻止其顺利
+                    注册，是主动行为；商标异议答辩是在他人对自己的商标提出异议后，为了争取自己的商标获得核准
+                    注册不得不进行的行为，是被动行为。</p>
+                    <h4>Q：商标被异议后可以不进行答辩吗，不答辩有什么影响吗？</h4>
+                    <p><strong>A：</strong>如果不进行答辩，则该商标正常进入异议程序，由异议处审查员公平的
+                    根据异议申请人提供的证据材料做出裁定，结果偏向于异议人。若他人异议成功，则商标局将对该商标
+                    不予核准注册。</p>
+                    <h4>Q：提供哪些材料对异议答辩成功更有利？</h4>
+                    <p><strong>A：</strong>尽可能展示自己在先使用的时间证据及相关材料。另外，被异议商标经
+                    过自己的使用所产生的知名度和美誉度，也是提高答辩成功率的有利证据。</p>
+                </section>
+            </article>
 
             <div class="ta-c pb20">
                 <div class="customer-service">联系品牌客服 - 小智&nbsp;&nbsp;18767172019</div>
@@ -81,7 +117,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionYydb',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +127,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'mark',
+      intention_product: '异议答辩',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +144,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;

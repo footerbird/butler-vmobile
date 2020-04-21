@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>商标许可备案</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,19 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
-                <div class="price"></div>
+                 alt="外推网商标许可备案服务" />
+                <div class="price"><i>¥</i><font>600</font><i>/件</i></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>适用于需要将自有商标授权许可他人使用的用户，需向商标局提交许可申请并报送
+            备案材料&nbsp;&nbsp;&nbsp;&nbsp;适用于需要将自有商标授权许可他人使用的用户，需向商标局提交
+            许可申请并报送备案材料
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,28 +37,54 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>商标权人将其注册商标许可给他人使用，双方除了签署《商标使用许可合同》，以约定被许可使用人
+                    商标的形式、范围和相应对价外，更应当及时报送商标局备案，以免产生纠纷。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
             <div class="intention-flow pt20">
                 <div class="intention-title"><span>服务流程</span></div>
                 <div class="intention-sub-title">SERVICE PROCESS</div>
-                <div class="flow-step flow-step4">
+                <div class="flow-step flow-step6">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
                     <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-3"><p>准备许可备案材料</p></div>
+                    <div class="step-cell step-cell-4"><p>向商标局提交<br>许可备案申请</p></div>
+                    <div class="step-cell step-cell-5"><p>官方审查</p></div>
+                    <div class="step-cell step-cell-6"><p>官方核发<br>许可备案证明</p></div>
                 </div>
             </div>
+            <article class="vant-article">
+                <section>
+                    <div class="intention-title"><span>常见问题</span></div>
+                    <div class="intention-sub-title">COMMON PROBLEMS</div>
+                    <h4>Q：商标许可备案有什么好处？</h4>
+                    <p><strong>A：</strong>满足许可方与被许可方实现双赢的需求:许可方拥有更多商标使用证据、
+                    预防商标被侵权；被许可方借助该商标打开市场，增加收益</p>
+                    <h4>Q：商标许可备案需提交的材料</h4>
+                    <p><strong>A：</strong>1、商标注册证复印件。2、商标使用许可合同。3、许可方与被许可方
+                    营业执照或身份证复印件。4、商标使用许可合同备案申请书。</p>
+                    <h4>Q：同时办理几件商标许可备案可以只签订一份合同吗？</h4>
+                    <p><strong>A：</strong>不可以。每一件商标应签定一份许可合同。</p>
+                    <h4>Q：商标许可协议提前终止，相应的备案是否需要变更？</h4>
+                    <p><strong>A：</strong>商标许可协议提前终止的，应当向商标局提交商标许可提前终止备案。</p>
+                    <h4>Q：不向商标局做许可备案，仅通过合同约定的方式，可以将商标许可他人使用吗？</h4>
+                    <p><strong>A：</strong>可以使用，但如有善意的第三方侵犯了被许可人的权益，则无法通过
+                    正当程序获得相应的赔偿。建议先许可备案，再使用。</p>
+                    <h4>Q：商标持有人将商标的使用权许可给别人后，自己还能使用吗？</h4>
+                    <p><strong>A：</strong>商标许可有三种方式:普通许可、排他许可、独占许可；
+                        普通许可:商标持有人可多次许可，许可人和被许可人均可使用；
+                        排他许可:仅限许可人和被许可人使用，第三方不可使用；
+                        独占许可:仅限被许可人使用，许可人及其他第三方均不可使用。
+                    </p>
+                    <h4>Q：商标许可的期限可以自行约定吗？</h4>
+                    <p><strong>A：</strong>商标许可的期限可在商标专用权有效期内自行约定。</p>
+                    <h4>Q：商标许可协议到期未续签，但是继续使用是否属于商标侵权？</h4>
+                    <p><strong>A：</strong>商标许可协议中如果没有明确约定协议到期后自动续期，到期后继续使
+                    用该商标的行为就属于侵权行为。商标所有人可以要求使用人支付超期使用应支付的许可费用，也可以
+                    追究对方商标侵权的责任。</p>
+                </section>
+            </article>
 
             <div class="ta-c pb20">
                 <div class="customer-service">联系品牌客服 - 小智&nbsp;&nbsp;18767172019</div>
@@ -81,7 +106,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionXkba',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +116,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'mark',
+      intention_product: '商标许可备案',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +133,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;

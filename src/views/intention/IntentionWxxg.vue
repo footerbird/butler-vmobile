@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>商标无效宣告</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,19 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
-                <div class="price"></div>
+                 alt="外推网商标无效宣告服务" />
+                <div class="price"><i>¥</i><font>3500</font><i>/件</i></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>适用于他人已注册成功的商标侵犯自身在先权或违反《商标法》，希望宣告该商标无效
+            的用户&nbsp;&nbsp;&nbsp;&nbsp;适用于他人已注册成功的商标侵犯自身在先权或违反《商标法》，希望宣
+            告该商标无效的用户
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,28 +37,66 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>对核准注册的商标，自核准之日起五年内，在先权利人、利害关系人认为其侵犯了在先权利
+                    或利益的，可以向商评委提出无效宣告。驰名商标不受五年的限制。 具体无效理由主要包括：
+                    1. 侵犯了在先商标注册专用权； 2. 侵犯了驰名商标专用权； 3. 侵犯了在先商号权或在先
+                    专利权或著作权； 4. 以不正当手段抢注他人在先使用并具有一定影响力的商标； 5. 属于未
+                    经授权，以自己的名义将被代表人的商标申请注册； 6. 侵犯他人在先特殊标志权的。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
             <div class="intention-flow pt20">
                 <div class="intention-title"><span>服务流程</span></div>
                 <div class="intention-sub-title">SERVICE PROCESS</div>
-                <div class="flow-step flow-step4">
+                <div class="flow-step flow-step7">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
-                    <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-2"><p>专业代理人分析<br>并评估成功概率</p></div>
+                    <div class="step-cell step-cell-3"><p>外推网业务下单<br>并成功付款</p></div>
+                    <div class="step-cell step-cell-4"><p>准备无效宣告材料</p></div>
+                    <div class="step-cell step-cell-5"><p>向商标局提交<br>无效宣告申请</p></div>
+                    <div class="step-cell step-cell-6"><p>官方审查</p></div>
+                    <div class="step-cell step-cell-7"><p>官方下发裁决</p></div>
                 </div>
             </div>
+            <article class="vant-article">
+                <section>
+                    <div class="intention-title"><span>常见问题</span></div>
+                    <div class="intention-sub-title">COMMON PROBLEMS</div>
+                    <h4>Q：什么是商标无效宣告？</h4>
+                    <p><strong>A：</strong>商标无效宣告是指商标在先权利人或者利害关系人认为已经注册的商标，
+                    违反《商标法》相关规定，请求商标评审委员会撤销该注册商标的法律程序。</p>
+                    <h4>Q：无效宣告只针对已经注册成功的商标吗？</h4>
+                    <p><strong>A：</strong>无效宣告程序只针对已经注册成功的商标才能提起。</p>
+                    <h4>Q：如何提升无效宣告的成功率？</h4>
+                    <p><strong>A：</strong>商标无效宣告的成功率不仅取决于申请人提供的相关证据的效力，也依赖
+                    于代理人的专业水平，，以及对方掌握的证据。而出具对方申请商标存在恶意的相关证据比较重要。</p>
+                    <h4>Q：什么时候下可以提出注册商标无效宣告申请？</h4>
+                    <p><strong>A：</strong>注册商标核准之日起五年内可以提出注册商标无效宣告申请，驰名商标不
+                    受五年限制。</p>
+                    <h4>Q：申请人向官方提出注册商标无效宣告申请除了基本的申请材料以外，还需要提供的证据材料有哪
+                    些？</h4>
+                    <p><strong>A：</strong>证据材料包括但不限于:企业或个人资质及荣誉方面材料；广告宣传资料、
+                    宣传册或产品包装印刷合同及发票；合同、销售发票；参展服务合同及发票、展会照片等等。</p>
+                    <h4>Q：注册商标无效宣告周期是多久？</h4>
+                    <p><strong>A：</strong>自注册商标无效宣告申请递交之日起，12个月左右可审查完毕，如有特殊
+                    情况延长6个月的审查期。</p>
+                    <h4>Q：申请商标无效宣告的重要性有哪些？</h4>
+                    <p><strong>A：</strong>1、商标无效宣告申请是防止已注册商标对自身商标造成淡化、弱化、丑化
+                    的重要途径。
+                        2、商标无效宣告能有效解决他人通过商标注册的形式损害权利人商标、版权、字号等在先权利。
+                        3、商标无效宣告申请是商标法赋予社会公众对侵犯自身权益的已注册商标所能够采取的最佳法律措
+                        施，当事人只有充分行使， 才能维护自身利益。
+                    </p>
+                    <h4>Q：商标无效宣告的理由有哪些？</h4>
+                    <p><strong>A：</strong>商标无效宣告的绝对理由包括:已经注册的商标，如果不具备可视性、显著
+                    性和合法性的，可以被宣告无效。另外，“以欺骗手段或者其他不正当手段取得注册”，也属于商标无效的
+                    理由。
+                        商标无效的相对理由包括:构成商标权相对无效的原因是商标权同在先取得的权利或其他合法权益相
+                        冲突。主要包括:因与他人在先权利冲突而无效；因侵犯他人驰名商标权而无效；因抢注他人未注册
+                        商标而无效；因违反代理或代表的规定而无效。
+                    </p>
+                </section>
+            </article>
 
             <div class="ta-c pb20">
                 <div class="customer-service">联系品牌客服 - 小智&nbsp;&nbsp;18767172019</div>
@@ -81,7 +118,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionWxxg',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +128,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'mark',
+      intention_product: '商标无效宣告',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +145,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;

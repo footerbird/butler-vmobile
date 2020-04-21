@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>商标续展</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,19 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
-                <div class="price"></div>
+                 alt="外推网商标续展服务" />
+                <div class="price"><i>¥</i><font>1000</font><i>/件</i></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>适用于注册商标有效期（十年）满前（在规定时效内）希望向商标局提交申请，
+            以保有原商标的用户&nbsp;&nbsp;&nbsp;&nbsp;适用于注册商标有效期（十年）满前（在规定时效内）
+            希望向商标局提交申请，以保有原商标的用户
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,28 +37,55 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>注册商标的有效期是10年，有效期满后需要继续使用的，应当在期满前12个月内申请续展注册；
+                    在此期间未能提出申请的。到期未续展的商标，则会注销其注册商标。如果因权利人疏忽，导致商标
+                    权无效后被他人合法抢注的话，之前所积累的所有品牌价值和市场投入都是为他人做嫁衣裳。 商标
+                    局对商标续展注册申请审查后，核发商标续展证明，不再另发商标注册证，原商标注册证与商标续展
+                    证明一起使用。 商标的知名度，在很大程度上依赖于广告宣传及商标使用年限，长久持有并运营一个
+                    商标权价值更大，因此商标续展尤为重要。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
             <div class="intention-flow pt20">
                 <div class="intention-title"><span>服务流程</span></div>
                 <div class="intention-sub-title">SERVICE PROCESS</div>
-                <div class="flow-step flow-step4">
+                <div class="flow-step flow-step6">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
                     <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-3"><p>准备商标续展材料</p></div>
+                    <div class="step-cell step-cell-4"><p>向商标局提交<br>续展申请</p></div>
+                    <div class="step-cell step-cell-5"><p>官方审查</p></div>
+                    <div class="step-cell step-cell-6"><p>官方核发续展证明</p></div>
                 </div>
             </div>
+            <article class="vant-article">
+                <section>
+                    <div class="intention-title"><span>常见问题</span></div>
+                    <div class="intention-sub-title">COMMON PROBLEMS</div>
+                    <h4>Q：为什么要及时办理商标续展？</h4>
+                    <p><strong>A：</strong>商标注册在有效期满前，商标所有人应及时在商标注册机关办理续展
+                    注册手续。不要使商标过期失效，失去商标专用权。</p>
+                    <h4>Q：商标续展需要多长时间？</h4>
+                    <p><strong>A：</strong>1、准备申请文件，向官方提交商标续展注册申请。2、商标局审查，
+                    3~6个月会核发续展注册商标证明。</p>
+                    <h4>Q：商标续展后的有效期是多久？</h4>
+                    <p><strong>A：</strong>商标续展可以延长商标专用权10年，不限续展次数</p>
+                    <h4>Q：未在有效期内及时商标续展，怎么办？</h4>
+                    <p><strong>A：</strong>已注册的商标期满之日起6个月内希望仍继续保有该商标，可以办理
+                    商标宽展申请，继续保有该商标。</p>
+                    <h4>Q：办理商标续展申请，商标局会发受理通知书吗？</h4>
+                    <p><strong>A：</strong>续展申请不下发受理通知书，下发的是《核准续展注册证明》，上面
+                    会写明续展后的商标权有效的起始日和终止日。注意原商标注册证也要妥善保管，以便和续展证明一
+                    起使用。</p>
+                    <h4>Q：我的商标有效期快到了，我的企业也搬迁了，可否在商标续展时同时办理商标变更？</h4>
+                    <p><strong>A：</strong>可以一并办理商标续展和商标变更</p>
+                    <h4>Q：我的商标有效期快到了，我可以将商标售出吗？</h4>
+                    <p><strong>A：</strong>可以售出，为了保证您在售出前一直持有商标专用权，建议您尽快办理
+                    商标续展，也可以在做商标转让时一并办理商标续展。</p>
+                    <h4>Q：我的商标证书丢了，商标有效期快到了，我能办理续展吗？</h4>
+                    <p><strong>A：</strong>可以办理续展，也可以在办理续展时一并办理补发商标证。</p>
+                </section>
+            </article>
 
             <div class="ta-c pb20">
                 <div class="customer-service">联系品牌客服 - 小智&nbsp;&nbsp;18767172019</div>
@@ -81,7 +107,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionSbxz',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +117,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'mark',
+      intention_product: '商标续展',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +134,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;

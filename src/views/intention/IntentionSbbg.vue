@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>商标变更</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,19 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
-                <div class="price"></div>
+                 alt="外推网商标变更服务" />
+                <div class="price"><i>¥</i><font>600</font><i>/件</i></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>适用于需要变更自有商标的注册人名义、登记地址等注册事项（代理人、文件接收人）
+            的用户&nbsp;&nbsp;&nbsp;&nbsp;适用于需要变更自有商标的注册人名义、登记地址等注册事项（代理人、
+            文件接收人）的用户
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,28 +37,57 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>商标在注册有效期限内，当其注册人变更其名义、地址、代理人，或者删减指定的商品的，
+                    应及时向商标局办理变更手续。 如果要改变注册商标的文字、图形，则应当重新提出商标注册
+                    申请，按照新的商标注册申请对待。 商标局对商标变更申请审查后，核发商标变更证明，不再
+                    另发商标注册证，原商标注册证与商标变更证明一起使用。 企业、事业单位和个体工商业者的
+                    名义改变后，必须履行变更手续后才能继续享有原有的商标专用权。 企业、事业单位和个体工
+                    商业者的地址改变后，若不进行商标变更备案，后续若商标被异议、撤三、无效，都无法及时收
+                    到商标局下发的通知，最终可能导致权利的丧失。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
             <div class="intention-flow pt20">
                 <div class="intention-title"><span>服务流程</span></div>
                 <div class="intention-sub-title">SERVICE PROCESS</div>
-                <div class="flow-step flow-step4">
+                <div class="flow-step flow-step6">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
                     <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-3"><p>准备商标变更材料</p></div>
+                    <div class="step-cell step-cell-4"><p>向商标局提交<br>变更申请</p></div>
+                    <div class="step-cell step-cell-5"><p>官方审查</p></div>
+                    <div class="step-cell step-cell-6"><p>官方核发变更证明</p></div>
                 </div>
             </div>
+            <article class="vant-article">
+                <section>
+                    <div class="intention-title"><span>常见问题</span></div>
+                    <div class="intention-sub-title">COMMON PROBLEMS</div>
+                    <h4>Q：申请商标变更需要注意的事项有哪些？</h4>
+                    <p><strong>A：</strong>商标注册人名义或者地址发生变更的，商标注册人应当将其全部注册商标一
+                    并变更（包括已上初审公告尚在公告期的商标），没有一并变更的视为放弃变更申请，会影响到商标注册人
+                    的权益。</p>
+                    <h4>Q：商标变更成功后，会重新下发商标证书吗？</h4>
+                    <p><strong>A：</strong>商标局会下发《商标变更核准证明》，此文件须同原商标证书一并使用，不
+                    再下发新的证书（但申请人可申请补发商标证书，此时，商标证书的信息为最新版）。</p>
+                    <h4>Q：我有好几个商标，这次只变一个，其他的不变可以吗？</h4>
+                    <p><strong>A：</strong>不可以。按照商标局的规定，商标变更必须是一并变更。也就是说，有几个
+                    商标就需要变更几个商标，否则的话商标局会将变更材料不予受理。</p>
+                    <h4>Q：企业地址变了，商标不做变更申请，可以继续使用吗？</h4>
+                    <p><strong>A：</strong>企业地址发生变化，商标必须办理变更手续，原因如下:1、商标局如有官方
+                    文件下发至申请人地址，申请人将无法获悉；2、申请人如做商标许可或转让，也需同时办理商标变更。</p>
+                    <h4>Q：企业名称变了，是做商标变更，还是商标转让？</h4>
+                    <p><strong>A：</strong>企业名称发生变化，是要办理商标变更；如企业因合并、兼并或改制而发生
+                    商标专用权移转的，应当到商标局办理注册商标的移转手续，即商标转让。</p>
+                    <h4>Q：企业拥有10个商标，如果企业名称（或地址）发生变化，可以只做核心类别的商标变更吗？</h4>
+                    <p><strong>A：</strong>同一企业名下的所有商标应一并办理变更申请，如仅办理部分类别，商标局
+                    也会下发补正通知要求一并办理。</p>
+                    <h4>Q：如果商标所有人名义先后经历过A/B/C三次变化，能一次从A变更为C么？</h4>
+                    <p><strong>A：</strong>如果商标局仅登记过A&C名义的商标，没有登记过B名义商标，只要工商局能
+                    够开具从A变更到C的变更证明，可以直接从A变为C。如果商标局登记过A/B/C三种名义申请的商标，就只能
+                    从A变更到B，再从B变更到C，申请材料可以一次性提交上去。</p>
+                </section>
+            </article>
 
             <div class="ta-c pb20">
                 <div class="customer-service">联系品牌客服 - 小智&nbsp;&nbsp;18767172019</div>
@@ -81,7 +109,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionSbbg',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +119,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'mark',
+      intention_product: '商标变更',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +136,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;

@@ -70,6 +70,7 @@
         <van-cell-group class="mt15">
             <van-cell title="关于我们" is-link to="/about" />
             <van-cell title="用户协议" is-link to="/agreement" />
+            <van-cell title="常见问题" is-link to="/problem" />
         </van-cell-group>
 
         <van-button type="default" class="mt15" block
@@ -128,6 +129,7 @@
         <van-cell-group class="mt15">
             <van-cell title="关于我们" is-link to="/about" />
             <van-cell title="用户协议" is-link to="/agreement" />
+            <van-cell title="常见问题" is-link to="/problem" />
         </van-cell-group>
         </template>
 

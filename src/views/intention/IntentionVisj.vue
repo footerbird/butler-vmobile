@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>企业VI形象视觉设计</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,19 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
+                 alt="外推网企业VI形象视觉设计服务" />
                 <div class="price"></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>VI设计有助于企业带来视觉的宣传作用，提升品牌辨识度，同时还能提高消费者对品牌
+            的忠诚度，加强企业文化建设。&nbsp;&nbsp;&nbsp;&nbsp;VI设计有助于企业带来视觉的宣传作用，提升品
+            牌辨识度，同时还能提高消费者对品牌的忠诚度，加强企业文化建设。
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,15 +37,17 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>VI设计，即企业的视觉形象识别（VisualIdentity），是指在企业经营理念的指导下，运用平面
+                    设计等方法使企业内涵和市场定位视觉化、形象化。其包含VI基础和VI应用两大部分。A.VI基础：标志
+                    、标准字、标准色、辅助图形、辅助色等规范设计。B.VI应用：包装系列、展会、办公用品、户外广告
+                    、名片、画册等应用设计。VI设计对外宣传：(1)明确企业的市场定位，属企业无形资产的一个重要组
+                    成部分；(2)以形象的视觉形式宣传企业，传达企业的经营理念和企业文化；(3)与其他企业区分开来，
+                    使其具有明显的特征，确保企业的独特性和不可替代性，从而提升企业形象与知名度；(4)以自己特有的
+                    视觉符号系统吸引公众的注意力并产生记忆，使消费者对该企业所提供的产品或服务产生最高的品牌忠诚
+                    度；(5)企业外部环境的变化是不以企业意志为转移的，但当面对具有挑战性的外部因素时，VI能够有效
+                    地调节各种关系。VI设计对内：(1)提高员工对企业的认同感，激励员工士气；(2)吸引人才、确保生产
+                    力；(3)增强合作商、投资方的信赖和支持；(4)统一制作形式、节约制作成本；(5)方便内部管理、活用
+                    外部人员。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
@@ -55,9 +56,9 @@
                 <div class="intention-sub-title">SERVICE PROCESS</div>
                 <div class="flow-step flow-step4">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
-                    <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-2"><p>品牌设计师分析<br>并评估复杂度</p></div>
+                    <div class="step-cell step-cell-3"><p>外推网业务下单<br>并成功付款</p></div>
+                    <div class="step-cell step-cell-4"><p>获得VI设计图样</p></div>
                 </div>
             </div>
 
@@ -81,7 +82,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionVisj',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +92,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'other',
+      intention_product: '企业VI形象视觉设计',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +109,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;

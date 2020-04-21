@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>补注册证</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,18 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
-                <div class="price"></div>
+                 alt="外推网补注册证服务" />
+                <div class="price"><i>¥</i><font>1000</font><i>/件</i></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>适用于《商标注册证》遗失或者破损，想要申请补发证书的商标注册人
+            &nbsp;&nbsp;&nbsp;&nbsp;适用于《商标注册证》遗失或者破损，想要申请补发证书的商标注册人
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,28 +36,40 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>补发商标注册证是指在《商标注册证》遗失或者破损的情况下，商标注册人向商标局提出补发
+                    商标注册证申请，并取得商标再次发出的《商标注册证》的程序。
+                    遗失的，补发申请书件齐备并符合规定，经审查核准后，商标局在《商标公告》上刊登遗失证明，
+                    发出《领取商标注册通知书》；
+                    破损的，申请人在提交补发申请时应将《商标注册证》交回商标局，如补证申请书件齐备并符合规
+                    定，经审查核准后，商标局发出《领取商标注册通知书》。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
             <div class="intention-flow pt20">
                 <div class="intention-title"><span>服务流程</span></div>
                 <div class="intention-sub-title">SERVICE PROCESS</div>
-                <div class="flow-step flow-step4">
+                <div class="flow-step flow-step6">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
                     <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-3"><p>准备补注册证材料</p></div>
+                    <div class="step-cell step-cell-4"><p>向商标局提交<br>补注册证申请</p></div>
+                    <div class="step-cell step-cell-5"><p>官方审查</p></div>
+                    <div class="step-cell step-cell-6"><p>领取新证书</p></div>
                 </div>
             </div>
+            <article class="vant-article">
+                <section>
+                    <div class="intention-title"><span>常见问题</span></div>
+                    <div class="intention-sub-title">COMMON PROBLEMS</div>
+                    <h4>Q：申请补发《商标注册证》有何具体要求？</h4>
+                    <p><strong>A：</strong>（1）申请人应当按照要求如实填写申请书件，不得擅自修改格式。申请
+                    书应当打字或印刷。 （2）申请人名称、申请人章戳（签字）处加盖的章戳（签字）应当与其身份证明
+                    文件中的名称一致。 （3）商标注册号应按照《商标注册证》填写，一份申请补发一件《商标注册证》。</p>
+                    <h4>Q：申请补发《商标注册证》应提交哪些文件资料？</h4>
+                    <p><strong>A：</strong>（1）补发商标注册证申请书； （2）商标注册人经盖章或者签字确认的
+                    身份证明文件（营业执照副本、身份证等）复印件； （3）商标代理委托书。</p>
+                </section>
+            </article>
 
             <div class="ta-c pb20">
                 <div class="customer-service">联系品牌客服 - 小智&nbsp;&nbsp;18767172019</div>
@@ -81,7 +91,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionBzcz',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +101,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'mark',
+      intention_product: '补注册证',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +118,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;

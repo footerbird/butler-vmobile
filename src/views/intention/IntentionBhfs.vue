@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>外推网域名代理服务</h4>
+            <h4>商标驳回复审</h4>
             <router-link class="home-icon" to="/"></router-link>
         </div>
     </div>
@@ -13,20 +13,19 @@
         <div class="intention-page">
             <div class="intention-banner">
                 <img src="../../assets/images/intention-banner.png" width="100%"
-                 alt="外推网域名代理服务" />
-                <div class="price"></div>
+                 alt="外推网商标驳回复审服务" />
+                <div class="price"><i>¥</i><font>3500</font><i>/件</i></div>
             </div>
-            <intention-marquee>提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以
-                防止域名被恶意抢注，保护品牌资产安全。&nbsp;&nbsp;&nbsp;&nbsp;提前抢占互联网入口，有丰富的
-                域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。
+            <intention-marquee>适用于商标实质审查未通过，（在规定时效内）希望向商标局提交复审申请，
+            再次争取的用户&nbsp;&nbsp;&nbsp;&nbsp;适用于商标实质审查未通过，（在规定时效内）希望
+            向商标局提交复审申请，再次争取的用户
             </intention-marquee>
             <van-cell-group>
                 <div class="intention-page__title pt10 pb10"><span>为了更好的了解您的需求，请完善以下信息</span></div>
-                <van-field v-model="intention_product" placeholder="您想购买的域名" />
                 <van-field v-model="intention_name" placeholder="联系姓名" />
                 <van-field v-model="intention_phone" type="tel" placeholder="手机号码" />
                 <van-field v-model="description" type="textarea" rows="2" autosize
-                 maxlength="50" show-word-limit placeholder="请输入详细信息,例如预算" />
+                 maxlength="50" show-word-limit placeholder="请输入详细信息" />
             </van-cell-group>
 
             <div class="van-button-area">
@@ -38,28 +37,65 @@
             <div class="intention-summary">
                 <div class="summary-box">
                     <p style="text-indent: -6px;">【注释】</p>
-                    <p>域名作为互联网门户入口，有着互联网房地产之称，其重要性也是不言而喻。域名主要有以下几点
-                    用途。一、建站，不管是博客也好，还是网站也好，域名都是搭建这些终端的必要条件。
-                    二、有的人购买域名，完全是处于自己的喜好，比如想拥有跟自己名字相同的域名或者想注册对自己来
-                    说有特殊意义的域名。
-                    三、还有的人购买域名，是出于投资的的目的，域名里蕴含的价值是无法估量的，有的域名开口就是几
-                    百万甚至上千万的价格，有些品相不错的域名它的售卖价格也会比注册价格高很多。
-                    四、对于一些品牌方来说，还有一种批量注册或者购买相似相关域名的现象，京东、腾讯、阿里等等品
-                    牌方都有专人去批量收购与他们的产品或者品牌相关强以及相似度高的域名。这一举动其实是对他们品
-                    牌的保护，以免有人用这些容易让人混淆的域名去做一些蹭流量甚至是破坏品牌名誉的事。</p>
+                    <p>商标局在对商标进行实质审查时存在主观性，因此，申请注册的商标只要没有违反《商标法》的
+                    禁令条款，都可以申请商标驳回复审。商标驳回复审申请递交后，商标评审委员会会根据注册申请人
+                    提交的书面材料、使用证据等情况依法做出是否核准注册的决定。 目前从商标驳回复审案件判决结果
+                    整体情况来看，通过商标驳回复审取得商标权利的申请人数量不在少数，成功率较高。 在驳回复审阶
+                    段，如果可以提供以下证据，则可以极大提升复审成功率： 商标构思及使用情况（主要突出知名度）、
+                    企业简介、企业所获得的各项荣誉、企业最近三年销售、广告费用及相关财务情况、以及企业媒体
+                    报道或图片。</p>
                 </div>
             </div>
             <!-- 服务流程 -->
             <div class="intention-flow pt20">
                 <div class="intention-title"><span>服务流程</span></div>
                 <div class="intention-sub-title">SERVICE PROCESS</div>
-                <div class="flow-step flow-step4">
+                <div class="flow-step flow-step7">
                     <div class="step-cell step-cell-1"><p>品牌顾问沟通<br>了解业务需求</p></div>
-                    <div class="step-cell step-cell-2"><p>外推网业务下单<br>并成功付款</p></div>
-                    <div class="step-cell step-cell-3"><p>域名专家评估<br>分析、谈判、收购</p></div>
-                    <div class="step-cell step-cell-4"><p>获得想要的域名</p></div>
+                    <div class="step-cell step-cell-2"><p>专业代理人分析<br>并评估成功概率</p></div>
+                    <div class="step-cell step-cell-3"><p>外推网业务下单<br>并成功付款</p></div>
+                    <div class="step-cell step-cell-4"><p>准备复审申请材料</p></div>
+                    <div class="step-cell step-cell-5"><p>向商标局提交<br>复审申请</p></div>
+                    <div class="step-cell step-cell-6"><p>官方审查</p></div>
+                    <div class="step-cell step-cell-7"><p>官方下发裁决</p></div>
                 </div>
             </div>
+            <article class="vant-article">
+                <section>
+                    <div class="intention-title"><span>常见问题</span></div>
+                    <div class="intention-sub-title">COMMON PROBLEMS</div>
+                    <h4>Q：什么情况下需要申请商标驳回复审？</h4>
+                    <p><strong>A：</strong>当收到商标局下发的驳回通知书时，您对驳回理由不服，十五日之内可以
+                    向国家商标评审委员会提起驳回复审程序。</p>
+                    <h4>Q：商标驳回复审需要多少时间?</h4>
+                    <p><strong>A：</strong>商标申请人在收到驳回通知书之日起15天内可以向国家商标评审委员会提
+                    起驳回复审申请，商评委会在9个月内发出复审的裁决决定</p>
+                    <h4>Q：商标复审不成功怎么办?</h4>
+                    <p><strong>A：</strong>如果针对国家商评委下发的商标复审决定不服，可以向知识产权法院提起
+                    行政诉讼启动司法程序；如果是由于引证在先注册商标而被驳回，也可以重新提交注册申请，同时针对引
+                    证的在先注册商标提起撤三、无效宣告等手段扫清注册障碍。</p>
+                    <h4>Q：为什么商标被驳回了，还能通过申请复审获得成功？</h4>
+                    <p><strong>A：</strong>驳回复审之所以可能会成功，是因为商标驳回是国家商标局作出的审查决
+                    定，但是商标驳回复审申请是向商评委提出的，商标局与商评委的审查标准有所不同，表现在:
+                        商标局审查完全是根据递交的材料，不会考虑商标的实际使用情况；而如果提驳回复审的理由中有涉
+                        及商标实际使用情况的，商评委会考虑。对商标是否近似的判断，商标局与商评委的标准也略有不同
+                        :商标局基本是按照审查标准来审核，而商评委考虑的会比较全面。商标审查存在一定的主观性，不
+                        同审查员得出的结果可能有所不同。鉴于商标审查的存在一定的主观性，申请商标驳回复审是有可能
+                        获得商标成功注册的。当然，需要针对个案分析以制定保护策略。
+                    </p>
+                    <h4>Q：商标为什么会被驳回?</h4>
+                    <p><strong>A：</strong>在注册的过程中，经过商标局实质审核后，认为有不能通过的理由，就会
+                    驳回，如:与在先申请过的商标近似或相同，或者商标中存在通用词等。</p>
+                    <h4>Q：收到商标驳回通知书后应该做什么?</h4>
+                    <p><strong>A：</strong>企业注册申请的商标被驳回时会收到商标局发出的《商标驳回通知书》或
+                    《商标部分驳回通知书》后，我们的建议是:
+                        1、将《商标驳回通知书》或《商标部分驳回通知书》复印一份，并且保管好原件，也要保管好用来
+                        邮寄通知书的信封。如果是直接到商标局领取的，就没有信封，保管好通知书原件即可。
+                        2、根据信封上的邮戳或者是通知书背面左下角打印的收到时间计算出复审的截止日期，需要做驳回
+                        复审的一定要在截止日期之前提交驳回复审申请。
+                    </p>
+                </section>
+            </article>
 
             <div class="ta-c pb20">
                 <div class="customer-service">联系品牌客服 - 小智&nbsp;&nbsp;18767172019</div>
@@ -81,7 +117,7 @@ import IntentionMarquee from '../../components/IntentionMarquee.vue';
 import { Valid } from '../../util/util';
 
 export default {
-  name: 'IntentionDomain',
+  name: 'IntentionBhfs',
   components: {
     IntentionMarquee,
   },
@@ -91,8 +127,8 @@ export default {
   // 使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
   data() {
     return {
-      intention_type: 'domain',
-      intention_product: '',
+      intention_type: 'mark',
+      intention_product: '商标驳回复审',
       intention_name: '',
       intention_phone: '',
       description: '',
@@ -108,10 +144,6 @@ export default {
     },
     submitIntention() {
       const that = this;
-      if (that.intention_product === '') {
-        that.$toast('请输入域名');
-        return false;
-      }
       if (that.intention_name === '') {
         that.$toast('请输入您的联系姓名');
         return false;
