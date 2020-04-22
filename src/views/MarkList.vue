@@ -34,6 +34,7 @@
 
 <script>
 // @ is an alias to /src
+import { markSalePrice } from '../util/util';
 import Tabbar from '../components/Tabbar.vue';
 
 export default {
@@ -43,7 +44,7 @@ export default {
   },
   filters: {
     number_format(value) {
-      return parseInt(value, 10).toLocaleString();
+      return parseInt(markSalePrice(value), 10).toLocaleString();
     },
   },
   data() {

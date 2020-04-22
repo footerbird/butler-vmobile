@@ -60,3 +60,17 @@ export const removeStore = (name) => {
   if (!name) return false;
   window.localStorage.removeItem(name);
 };
+
+/**
+ * 商标销售价格
+ */
+export const markSalePrice = (val) => {
+  const price = +val;
+  if (!Number.isNaN(price)) {
+    if (price < 20000) {
+      return 3000 + price;
+    }
+    return 1.2 * price;
+  }
+  return 0;
+};

@@ -101,13 +101,15 @@
 </template>
 
 <script>
+import { markSalePrice } from '../util/util';
+
 const moment = require('moment');
 
 export default {
   name: 'MarkDetail',
   filters: {
     number_format(value) {
-      return parseInt(value, 10).toLocaleString();
+      return parseInt(markSalePrice(value), 10).toLocaleString();
     },
     date_format(value) {
       return moment(value).format('YYYY-MM-DD');
