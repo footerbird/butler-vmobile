@@ -93,6 +93,13 @@ export default {
     const that = this;
     that.load_domainDetail();
   },
+  watch: {
+    $route(to, from) { // 监听路由是否变化
+      if (to.params.domain_name_str !== from.params.domain_name_str) {
+        this.load_domainDetail(); // 重新加载数据
+      }
+    },
+  },
   methods: {
     goBack() {
       if (window.history.length > 1) {

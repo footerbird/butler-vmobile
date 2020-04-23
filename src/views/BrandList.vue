@@ -22,8 +22,8 @@
                     </div>
                     <div class="brand-item__hd">
                         <img class="brand-item__thumb"
-                        :src="'https://m.waitui.com/' + brand.thumb_path"
-                        :alt="brand.brand_name + '怎么样'" >
+                        :src="`https://m.waitui.com/${brand.thumb_path}`"
+                        :alt="`${brand.brand_name}怎么样`" >
                     </div>
                 </router-link>
                 </template>

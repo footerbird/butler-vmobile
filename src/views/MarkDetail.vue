@@ -19,7 +19,7 @@
 
             <div class="info-top">
                 <div class="thumb-box">
-                    <img class="thumb" :src="'https://m.waitui.com/' + mark.image_path" />
+                    <img class="thumb" :src="`https://m.waitui.com/${mark.image_path}`" />
                 </div>
                 <div class="thumb-right">
                     <h4>{{ mark.mark_name }}
@@ -142,6 +142,13 @@ export default {
   mounted() {
     const that = this;
     that.load_markDetail();
+  },
+  watch: {
+    $route(to, from) { // 监听路由是否变化
+      if (to.params.regno_md !== from.params.regno_md) {
+        this.load_markDetail(); // 重新加载数据
+      }
+    },
   },
   methods: {
     goBack() {

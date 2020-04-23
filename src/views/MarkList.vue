@@ -11,7 +11,7 @@
                 <router-link class="mark-item"
                 :to="'/mark_detail/' + mark.regno_md" :key="index" >
                     <div class="thumb-box">
-                        <img class="thumb" :src="'https://m.waitui.com/' + mark.image_path" />
+                        <img class="thumb" :src="`https://m.waitui.com/${mark.image_path}`" />
                     </div>
                     <div class="category">
                         <template v-if="mark.mark_category < 10">

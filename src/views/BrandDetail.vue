@@ -20,8 +20,8 @@
             <div class="article-summary" v-html="summary_str"></div>
             <section>
                 <template v-if="brand.poster_path != ''">
-                <p><img :src="'https://m.waitui.com/' + brand.poster_path"
-                :alt="brand.brand_name + '怎么样'" /></p>
+                <p><img :src="`https://m.waitui.com/${brand.poster_path}`"
+                :alt="`${brand.brand_name}怎么样`" /></p>
                 </template>
                 <div v-html="brand.brand_content"></div>
                 <template v-if="brand.brand_phone != ''">
@@ -69,6 +69,13 @@ export default {
   mounted() {
     const that = this;
     that.load_brandDetail();
+  },
+  watch: {
+    $route(to, from) { // 监听路由是否变化
+      if (to.params.brand_id !== from.params.brand_id) {
+        this.load_brandDetail(); // 重新加载数据
+      }
+    },
   },
   methods: {
     goBack() {

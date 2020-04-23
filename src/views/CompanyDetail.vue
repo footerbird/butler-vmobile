@@ -164,6 +164,13 @@ export default {
     const that = this;
     that.load_companyDetail();
   },
+  watch: {
+    $route(to, from) { // 监听路由是否变化
+      if (to.params.company_id !== from.params.company_id) {
+        this.load_companyDetail(); // 重新加载数据
+      }
+    },
+  },
   methods: {
     goBack() {
       if (window.history.length > 1) {
