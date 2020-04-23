@@ -13,6 +13,8 @@ module.exports = app => {
   // 商标相关
   router.post('/api/get_markAjax', controller.mark.get_markAjax);
   router.post('/api/get_markDetail', controller.mark.get_markDetail);
+  router.post('/api/get_markSort', controller.mark.get_markSort);
+  router.post('/api/get_markSortItem', controller.mark.get_markSortItem);
 
   // 企业相关
   router.post('/api/get_companyAjax', controller.company.get_companyAjax);

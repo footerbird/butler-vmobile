@@ -9,7 +9,7 @@ class MarkService extends Service {
     if (category === '') {
       sql += `select * from mark_info where is_onsale = 'sale' limit ${start},${length}`;
     } else {
-      sql += `select * from mark_info where is_onsale = 'sale' and mark_category = 
+      sql += `select * from mark_info where is_onsale = 'sale' and mark_category =
         ${category} limit ${start},${length}`;
     }
 
@@ -35,10 +35,39 @@ class MarkService extends Service {
     return query[0];
   }
 
+  async get_markCategory() {
+    const { app } = this;
+    let sql = '';
+    sql += `select * from mark_category where category_level = 1
+      order by category_id asc`;
+
+    const query = await app.mysql.query(sql);
+    return query;
+  }
+
+  async get_markCategoryDetail(code) {
+    const { app } = this;
+    let sql = '';
+    sql += `select * from mark_category where category_code = '${code}'`;
+
+    const query = await app.mysql.query(sql);
+    return query[0];
+  }
+
+  async get_markCategoryChildren(pcode) {
+    const { app } = this;
+    let sql = '';
+    sql += `select * from mark_category where category_pcode = '${pcode}'
+      order by category_id asc`;
+
+    const query = await app.mysql.query(sql);
+    return query;
+  }
+
   async get_myMarkCount(user_id, keyword) {
     const { app } = this;
     let sql = '';
-    sql += `select count(*) as total from mark_info  where mark_userid = 
+    sql += `select count(*) as total from mark_info  where mark_userid =
       ${user_id} and concat(mark_regno,mark_name,app_range) like '%${keyword}%'`;
 
     const query = await app.mysql.query(sql);

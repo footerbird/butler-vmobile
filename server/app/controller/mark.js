@@ -53,6 +53,51 @@ class MarkController extends Controller {
     };
   }
 
+  async get_markSort() {
+    const { ctx } = this;
+    const mark_category = await ctx.service.mark.get_markCategory();
+    
+    ctx.body = {
+      mark_category,
+    };
+  }
+
+  async get_markSortItem() {
+    const { ctx } = this;
+    let { code } = ctx.request.body;
+    code = code || '01';
+
+    const mark_category = await ctx.service.mark.get_markCategory();
+    // get_markCategoryDetail方法得到分类详情信息
+    const result = await ctx.service.mark.get_markCategoryDetail(code);
+    let category,
+      group_code;
+
+    if ([1,2].indexOf(result.category_level) !== -1) {
+
+      if (result.category_level === 1) { // 一级分类
+        category = result;
+      } else {
+        category = await ctx.service.mark.get_markCategoryDetail(result.category_pcode);
+        group_code = code;
+      }
+
+      // get_markCategoryChildren方法得到子分类
+      const groups = await ctx.service.mark.get_markCategoryChildren(category.category_code);
+      for (const group of groups) {
+        group.items = await ctx.service.mark.get_markCategoryChildren(group.category_code);
+      }
+      category.groups = groups;
+
+    }
+
+    ctx.body = {
+      mark_category,
+      category,
+      group_code,
+    };
+  }
+
 }
 
 module.exports = MarkController;
