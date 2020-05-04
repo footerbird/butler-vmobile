@@ -120,9 +120,11 @@ export default {
       const that = this;
       that.category.groups = [];
       that.$http
-        .post('/api/get_markSortItem', that.$qs.stringify({
-          code: that.$route.params.code,
-        }))
+        .get('/api/get_markSortItem', {
+          params: {
+            code: that.$route.params.code,
+          },
+        })
         .then(({ data }) => {
           that.mark_category = data.mark_category;
           that.category = data.category;

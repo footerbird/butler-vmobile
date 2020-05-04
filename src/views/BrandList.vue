@@ -58,9 +58,11 @@ export default {
     load_brandAjax() {
       const that = this;
       that.$http
-        .post('/api/get_brandAjax', that.$qs.stringify({
-          page: that.brand_page,
-        }))
+        .get('/api/get_brandAjax', {
+          params: {
+            page: that.brand_page,
+          },
+        })
         .then(({ data }) => {
           // 清空列表数据
           if (that.brand_refreshing) {

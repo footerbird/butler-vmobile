@@ -60,9 +60,11 @@ export default {
     load_markAjax() {
       const that = this;
       that.$http
-        .post('/api/get_markAjax', that.$qs.stringify({
-          page: that.mark_page,
-        }))
+        .get('/api/get_markAjax', {
+          params: {
+            page: that.mark_page,
+          },
+        })
         .then(({ data }) => {
           // 清空列表数据
           if (that.mark_refreshing) {

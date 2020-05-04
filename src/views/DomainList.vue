@@ -61,9 +61,11 @@ export default {
     load_domainAjax() {
       const that = this;
       that.$http
-        .post('/api/get_domainAjax', that.$qs.stringify({
-          page: that.domain_page,
-        }))
+        .get('/api/get_domainAjax', {
+          params: {
+            page: that.domain_page,
+          },
+        })
         .then(({ data }) => {
           // 清空列表数据
           if (that.domain_refreshing) {

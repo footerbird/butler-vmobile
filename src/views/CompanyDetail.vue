@@ -182,9 +182,11 @@ export default {
     load_companyDetail() {
       const that = this;
       that.$http
-        .post('/api/get_companyDetail', that.$qs.stringify({
-          company_id: that.$route.params.company_id,
-        }))
+        .get('/api/get_companyDetail', {
+          params: {
+            company_id: that.$route.params.company_id,
+          },
+        })
         .then(({ data }) => {
           that.company = data.company;
           that.brand_list = data.brand_list;

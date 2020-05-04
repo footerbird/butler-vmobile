@@ -111,9 +111,11 @@ export default {
     load_domainDetail() {
       const that = this;
       that.$http
-        .post('/api/get_domainDetail', that.$qs.stringify({
-          domain_name_str: that.$route.params.domain_name_str,
-        }))
+        .get('/api/get_domainDetail', {
+          params: {
+            domain_name_str: that.$route.params.domain_name_str,
+          },
+        })
         .then(({ data }) => {
           that.domain = data.domain;
           that.page_loading = false;

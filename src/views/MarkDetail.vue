@@ -161,9 +161,11 @@ export default {
     load_markDetail() {
       const that = this;
       that.$http
-        .post('/api/get_markDetail', that.$qs.stringify({
-          regno_md: that.$route.params.regno_md,
-        }))
+        .get('/api/get_markDetail', {
+          params: {
+            regno_md: that.$route.params.regno_md,
+          },
+        })
         .then(({ data }) => {
           that.mark = data.mark;
           that.page_loading = false;

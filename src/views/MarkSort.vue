@@ -69,7 +69,7 @@ export default {
     load_markSort() {
       const that = this;
       that.$http
-        .post('/api/get_markSort')
+        .get('/api/get_markSort')
         .then(({ data }) => {
           that.mark_category = data.mark_category;
           that.page_loading = false;

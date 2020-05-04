@@ -88,9 +88,11 @@ export default {
     load_brandDetail() {
       const that = this;
       that.$http
-        .post('/api/get_brandDetail', that.$qs.stringify({
-          brand_id: that.$route.params.brand_id,
-        }))
+        .get('/api/get_brandDetail', {
+          params: {
+            brand_id: that.$route.params.brand_id,
+          },
+        })
         .then(({ data }) => {
           that.brand = data.brand;
           that.company = data.company;

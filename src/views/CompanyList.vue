@@ -70,9 +70,11 @@ export default {
     load_companyAjax() {
       const that = this;
       that.$http
-        .post('/api/get_companyAjax', that.$qs.stringify({
-          page: that.company_page,
-        }))
+        .get('/api/get_companyAjax', {
+          params: {
+            page: that.company_page,
+          },
+        })
         .then(({ data }) => {
           // 清空列表数据
           if (that.company_refreshing) {
