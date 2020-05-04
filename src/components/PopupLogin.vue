@@ -250,6 +250,9 @@ export default {
         font-size: 16px;
         line-height: 1.1rem;
         padding: 0;
+        &:after{
+            left: 0;
+        }
     }
     .login-link-box{
         margin-top: .6rem;
