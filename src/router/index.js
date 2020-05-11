@@ -13,6 +13,7 @@ import CompanyDetail from '../views/CompanyDetail.vue';
 import BrandList from '../views/BrandList.vue';
 import BrandDetail from '../views/BrandDetail.vue';
 import MyConsole from '../views/MyConsole.vue';
+import MyAccount from '../views/MyAccount.vue';
 import intention from './intention';
 import help from './help';
 
@@ -128,6 +129,16 @@ const main = [
     meta: {
       keepAlive: true,
       title: '控制台 | 外推网',
+    },
+  },
+  {
+    path: '/my_account',
+    name: 'MyAccount',
+    component: MyAccount,
+    meta: {
+      keepAlive: true,
+      title: '基本资料 | 外推网',
+      requireAuth: true,
     },
   },
 ];

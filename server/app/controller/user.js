@@ -309,9 +309,11 @@ class UserController extends Controller {
 
   async get_myConsole() {
     const { ctx } = this;
-    let { phone, token } = ctx.request.body;
+    let { authorization } = ctx.request.header;
+    const token = authorization || '';
+    
+    let { phone } = ctx.request.body;
     phone = phone || '';
-    token = token || '';
 
     // 判断手机号是否已注册,1为已注册，0为未注册
     const regStatus = this.check_phoneRegister(phone);
@@ -389,6 +391,52 @@ class UserController extends Controller {
       domainCount,
       markCount,
       company_certify,
+    };
+  }
+
+  async get_myAccount() {
+    const { ctx } = this;
+    let { authorization } = ctx.request.header;
+    const token = authorization || '';
+
+    let { phone } = ctx.request.body;
+    phone = phone || '';
+
+    // 判断手机号是否已注册,1为已注册，0为未注册
+    const regStatus = this.check_phoneRegister(phone);
+    if (regStatus === 0) { // 提示未注册
+      const state = 'failed',
+        msg = '该手机号未注册，请先注册';
+      ctx.body = {
+        state,
+        msg,
+      };
+      return false;
+    }
+
+    const userinfo = await ctx.service.user.get_userByPhone(phone);
+    if (typeof (userinfo) === undefined) { // 未获取到用户信息
+      const state = 'failed',
+        msg = '程序错误，请重试';
+      ctx.body = {
+        state,
+        msg,
+      };
+      return false;
+    }
+    // 验证登录令牌,这里用户的令牌为用户密码的md5值
+    if (typeof (userinfo) !== undefined && userinfo.user_pwd !== token) {
+      const state = 'failed',
+        msg = '用户令牌错误，请重试';
+      ctx.body = {
+        state,
+        msg,
+      };
+      return false;
+    }
+
+    ctx.body = {
+      userinfo,
     };
   }
 

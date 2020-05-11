@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    userinfo: undefined,
+    userinfo: null,
     popup_login: false,
     popup_register: false,
     popup_findpwd: false,
@@ -18,7 +18,7 @@ export default new Vuex.Store({
       setStore('logintime', new Date().getTime());
     },
     logout(state) {
-      state.userinfo = undefined;
+      state.userinfo = null;
       removeStore('userinfo');
       removeStore('logintime');
     },

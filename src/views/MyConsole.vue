@@ -4,36 +4,36 @@
     <div class="header"></div>
     <div class="container" style="padding-bottom: 50px;">
 
-        <template v-if="userinfo !== undefined">
+        <template v-if="userinfo !== null">
         <div class="account-header">
             <a class="account-header-sign" :class="{'signed':userinfo.is_signed}">
                 {{ userinfo.is_signed ? '挖矿中' : '挖矿' }}
             </a>
             <div class="account-header-info">
-                <a class="account-header-figure">
+                <router-link class="account-header-figure" to="/my_account">
                     <template v-if="!userinfo.user_figure">
                     <img src="../assets/images/user-figure.png" />
                     </template>
                     <template v-else>
                     <img :src="'https://m.waitui.com/' + userinfo.user_figure" />
                     </template>
-                </a>
+                </router-link>
                 <div class="account-header-name">
-                    <h4><a>{{ userinfo.user_name }}</a></h4>
-                    <p><a>点击查看或编辑个人信息</a></p>
+                    <h4><router-link to="/my_account">{{ userinfo.user_name }}</router-link></h4>
+                    <p><router-link to="/my_account">点击查看或编辑个人信息</router-link></p>
                 </div>
             </div>
             <div class="account-header-tab">
                 <a>
-                    <h4>{{ user_balance ? user_balance : '--' }}</h4>
+                    <h4>{{ user_balance !== '' ? user_balance : '--' }}</h4>
                     <p>钱包</p>
                 </a>
                 <a>
-                    <h4>{{ user_score ? user_score : '--' }}</h4>
+                    <h4>{{ user_score !== '' ? user_score : '--' }}</h4>
                     <p>W币</p>
                 </a>
                 <a>
-                    <h4>{{ unreadCount ? unreadCount : '--' }}</h4>
+                    <h4>{{ unreadCount !== '' ? unreadCount : '--' }}</h4>
                     <p>未读</p>
                 </a>
             </div>
@@ -180,7 +180,7 @@ export default {
   },
   mounted() {
     const that = this;
-    if (that.userinfo !== undefined) {
+    if (that.userinfo !== null) {
       that.load_myConsole();
     }
   },

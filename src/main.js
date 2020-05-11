@@ -8,6 +8,18 @@ import store from './store';
 import './plugins/vant';
 import { getStore } from './util/util';
 
+// 添加请求拦截器
+axios.interceptors.request.use((config) => {
+  // 在发送请求之前，往请求头添加token
+  if (getStore('userinfo') && JSON.parse(getStore('userinfo')).user_token) {
+    config.headers.Authorization = JSON.parse(getStore('userinfo')).user_token;
+  }
+  return config;
+}, (error) => {
+  // 对请求错误做些什么
+  console.log(error);
+  return Promise.reject(error);
+});
 Vue.prototype.$http = axios;
 Vue.prototype.$qs = qs;
 
@@ -19,18 +31,32 @@ router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title;
   }
-  // 如果localStorage中有用户信息但是state中没有，则将localStorage中的用户信息赋给state
-  if (getStore('userinfo') && !store.state.userinfo) {
-    // 如果localStorage中的登录信息超时，超过一天，则清除localStorage中的用户信息
-    const timeDiff = new Date().getTime() - getStore('logintime');
-    if (timeDiff > 86400000) { // 1000*60*60*24
+
+  // 如果页面需要登录授权
+  if (to.meta.requireAuth) {
+    // 如果localStorage中没有用户信息或者登录超时(超过一天)，则跳去登录页面
+    let overTime = false;
+    if (!getStore('logintime')) {
+      overTime = true;
+    } else {
+      const timeDiff = new Date().getTime() - getStore('logintime');
+      if (timeDiff > 86400000) { // 1000*60*60*24
+        overTime = true;
+      }
+    }
+    if (!getStore('userinfo') || overTime) {
       store.commit('logout');
       next({ path: '/my_console' });
       return false;
     }
+  }
+
+  if (getStore('userinfo') && !store.state.userinfo) {
+    // 如果localStorage中有用户信息但是state中没有，则将localStorage中的用户信息赋给state
     const userinfo = JSON.parse(getStore('userinfo'));
     store.commit('login', userinfo);
   }
+
   next();
 });
 
