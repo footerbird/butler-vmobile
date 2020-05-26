@@ -4,7 +4,7 @@
     <div class="header">
         <div class="header-container">
             <a @click="goBack" class="back-icon"></a>
-            <h4>关于我们</h4>
+            <h4>关于我们1</h4>
         </div>
     </div>
     <div class="container" style="padding-top: 45px;">
