@@ -8,6 +8,8 @@ import store from './store';
 import './plugins/vant';
 import { getStore } from './util/util';
 
+require('./mock/index');
+
 // 添加请求拦截器
 axios.interceptors.request.use((config) => {
   // 在发送请求之前，往请求头添加token

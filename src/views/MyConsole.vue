@@ -78,7 +78,6 @@
           @click="logoutSuccess">退出登录</van-button>
         </template>
 
-
         <template v-else>
         <div class="account-header">
             <a class="account-header-sign" @click="changePopupLogin(true)">挖矿</a>

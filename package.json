@@ -11,6 +11,7 @@
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "fastclick": "^1.0.6",
+    "mockjs": "^1.1.0",
     "moment": "^2.24.0",
     "qs": "^6.9.1",
     "vant": "^2.6.3",
@@ -55,7 +56,8 @@
       "linebreak-style": 0,
       "prefer-destructuring": 0,
       "no-multi-assign": 0,
-      "no-await-in-loop": 0
+      "no-await-in-loop": 0,
+      "global-require": 0
     }
   },
   "browserslist": [
