@@ -57,7 +57,10 @@
       "prefer-destructuring": 0,
       "no-multi-assign": 0,
       "no-await-in-loop": 0,
-      "global-require": 0
+      "global-require": 0,
+      "no-eval": 0,
+      "no-alert": 0,
+      "no-console": 0
     }
   },
   "browserslist": [
